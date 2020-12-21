@@ -1,17 +1,18 @@
-import React from "react";
-import "./App.css";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import { Questions } from "./Questions";
+import React from 'react';
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { Questions } from './Questions';
 
-function App() {
+import Styles from './Styles.scss';
+
+const App = () => {
   return (
-    <div className="App">
+    <div className={Styles.App}>
       <Header />
       <Questions />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
