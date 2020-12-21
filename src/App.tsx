@@ -3,7 +3,7 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { Questions } from './Questions';
 
-import Styles from './Styles.scss';
+import Styles from './Styles.module.scss';
 
 const App = () => {
   return (

@@ -1,5 +1,10 @@
 import React from 'react';
+import Styles from './index.module.scss';
 
 export const Footer = () => {
-  return <footer><p>Footer</p></footer>
-}
+  return (
+    <footer className={Styles.footer}>
+      <p>Made in MCC with love!</p>
+    </footer>
+  );
+};
