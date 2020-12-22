@@ -69,6 +69,11 @@ export const Questions = () => {
     <main className={Styles.questions}>
       {Object.values(quiz).map((questions, index) => (
         <Row key={index}>
+          <Cell
+            key={index}
+            onPress={() => {}}
+            question={{ id: '', price: '', answer: '', question: '' }}
+          />
           {questions.map((question, index) => (
             <Cell key={index} question={question} onPress={openQuestion} />
           ))}

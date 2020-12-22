@@ -3084,7 +3084,7 @@ bootstrap-icons-react@1.0.0:
   resolved "https://registry.yarnpkg.com/bootstrap-icons-react/-/bootstrap-icons-react-1.0.0.tgz#bd4d9e735e8c9c3133a6ce8515c9bd64a897e8c4"
   integrity sha512-1+f0byDe2V1/AYFb2aAf3ea7Djb01fQV5kI57Jjl1QvLvsXdyNdtj7zgYtqEg1XA7LgWWgdHi1v6f9ka0Cm5nw==
 
-bootstrap-icons@1.2.1:
+bootstrap-icons@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.2.1.tgz#20eac9ec348744edc8b9e184a0f7057d1430f609"
   integrity sha512-c63G57gFN9Yz1Dmi1RRpBd+cm/Lil31nRsnYxX8VeC/2wTk1Z54OU4twyLAVpgj2lX2lyHx0M8+xhEdkr79RAg==
@@ -10165,6 +10165,11 @@ react-fontawesome@^1.6.1:
   integrity sha512-kottReWW1I9Uupub6A5YX4VK7qfpFnEjAcm5zB4Aepst7iofONT27GJYdTcRsj7q5uQu9PXBL7GsxAFKANNUVg==
   dependencies:
     prop-types "^15.5.6"
+
+react-icons@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.1.0.tgz#9ca9bcbf2e3aee8e86e378bb9d465842947bbfc3"
+  integrity sha512-FCXBg1JbbR0vWALXIxmFAfozHdVIJmmwCD81Jk0EKOt7Ax4AdBNcaRkWhR0NaKy9ugJgoY3fFvo0PHpte55pXg==
 
 react-is@^16.8.1:
   version "16.13.1"
