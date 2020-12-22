@@ -1,9 +1,10 @@
 import React, { ReactNode } from 'react';
+import Styles from './index.module.scss';
 
-export const Row = (props: {children: ReactNode}) => {
-  return (
-    <div>
-      {props.children}
-    </div>
-  );
+type OwnProps = {
+  children: ReactNode;
+};
+
+export const Row = (props: OwnProps) => {
+  return <div className={Styles.row}>{props.children}</div>;
 };

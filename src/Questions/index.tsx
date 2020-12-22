@@ -1,8 +1,9 @@
-import React  from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { Cell } from './Cell';
 import Styles from './index.module.scss';
 import { Row } from './Row';
+import Modal from 'react-modal';
 
 enum Categories {
   Games = 'Games',
@@ -10,7 +11,7 @@ enum Categories {
   Sport = 'Sport',
   Cinema = 'Cinema',
 }
-type Question = {
+export type Question = {
   id: string;
   price: string;
   question: string;
@@ -51,8 +52,16 @@ const quiz: Quiz = {
   ],
 };
 
+Modal.setAppElement('#root');
+
 export const Questions = () => {
+  const [isModalOpened, setIsModalOpened] = useState(false);
+
+  useEffect(() => {}, []);
+
   const openQuestion = (id: string) => {
+    const keys = Object.keys(quiz).map((value, index) => value);
+    console.log(keys);
     console.log(id);
   };
 
@@ -61,45 +70,14 @@ export const Questions = () => {
       {Object.values(quiz).map((questions, index) => (
         <Row key={index}>
           {questions.map((question, index) => (
-            <Cell key={index}/>
+            <Cell key={index} question={question} onPress={openQuestion} />
           ))}
         </Row>
       ))}
-      {/*{questionsMappedKey.map((category) => (*/}
-      {/*  <div*/}
-      {/*    style={{*/}
-      {/*      border: 1,*/}
-      {/*      borderColor: 'tomato',*/}
-      {/*      borderStyle: 'solid',*/}
-      {/*      marginTop: 16,*/}
-      {/*      marginBottom: 16,*/}
-      {/*    }}*/}
-      {/*  >*/}
-      {/*    <b*/}
-      {/*      style={{*/}
-      {/*        display: 'inline-block',*/}
-      {/*        minWidth: 70,*/}
-      {/*        paddingRight: 16,*/}
-      {/*        textAlign: 'right',*/}
-      {/*      }}*/}
-      {/*    >*/}
-      {/*      {category}*/}
-      {/*    </b>*/}
-      {/*    {Object.values(questions).map((question) => (*/}
-      {/*      <div style={{ display: 'inline-block' }}>*/}
-      {/*        <div style={{ padding: 16 }}>*/}
-      {/*          <button onClick={() => openQuestion(3)} style={{}}>*/}
-      {/*            {question}*/}
-      {/*          </button>*/}
-      {/*        </div>*/}
-      {/*        <div style={{ display: 'none' }} datatype={'3'}>*/}
-      {/*          {question.question}*/}
-      {/*        </div>*/}
-      {/*        <div style={{ display: 'none' }}>{question.answer}</div>*/}
-      {/*      </div>*/}
-      {/*    ))}*/}
-      {/*  </div>*/}
-      {/*))}*/}
+
+      <Modal isOpen={false} style={{ content: { background: 'tomato' } }}>
+        <p>Some modal stuff</p>
+      </Modal>
     </main>
   );
 };

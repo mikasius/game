@@ -1,10 +1,19 @@
+@import "~bootstrap/scss/bootstrap";
+
 .App {
   display: grid;
-  grid-gap: 25px;
+
   grid-template-rows: 50px 1fr 50px;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "questions"
-    "footer";
+
+  grid-template-areas: "header" "quiz" "footer";
+}
+
+body {
+  color: #ced4da;
+  background: #1d2124;
+}
+
+p {
+  margin-bottom: 0;
 }

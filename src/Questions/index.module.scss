@@ -1,3 +1,30 @@
 .questions {
-  flex-grow: 1;
+  grid-area: quiz;
+
+  display: grid;
+
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+
+  grid-template:
+          "cell" "cell" "cell" "cell" "cell" "cell"
+          "cell" "cell" "cell" "cell" "cell" "cell"
+          "cell" "cell" "cell" "cell" "cell" "cell"
+          "cell" "cell" "cell" "cell" "cell" "cell"
+;
+}
+
+.row {
+  display: flex;
+
+  flex-direction: row;
+}
+
+.cell {
+  grid-area: cell;
+
+  padding: 50px;
+
+  background: #0f6674;
+  border: 1px solid #ffffff;
 }
