@@ -23,5 +23,9 @@
   "include": [
     "src",
     "*.scss"
-  ]
+  ],
+  "typeAcquisition": {
+    "enable": true,
+    "include": ["./node_modules/@types", "./node_modules/bootstrap-icons-react"]
+  }
 }
