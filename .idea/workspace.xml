@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd4f4ac-7031-4b81-b07b-19035eb475b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Logo/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Questions/Cell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/Cell.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Questions/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/index.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Questions/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
