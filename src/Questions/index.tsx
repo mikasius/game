@@ -1,57 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { v4 as uuid } from 'uuid';
 import { Cell } from './Cell';
 import Styles from './index.module.scss';
 import { Row } from './Row';
 import Modal from 'react-modal';
 import { FaTimes } from 'react-icons/fa';
-
-enum Categories {
-  Games = 'Games',
-  MCC = 'MCC',
-  Sport = 'Sport',
-  Cinema = 'Cinema',
-}
-export type Question = {
-  id: string;
-  price: string;
-  question: string;
-  answer: string;
-};
-type Quiz = {
-  [category: string]: Question[];
-};
-
-const quiz: Quiz = {
-  [Categories.Games]: [
-    { id: uuid(), price: '100', question: '1?', answer: '1!' },
-    { id: uuid(), price: '200', question: '2?', answer: '2!' },
-    { id: uuid(), price: '300', question: '3?', answer: '3!' },
-    { id: uuid(), price: '400', question: '4?', answer: '4!' },
-    { id: uuid(), price: '500', question: '5?', answer: '5!' },
-  ],
-  [Categories.MCC]: [
-    { id: uuid(), price: '100', question: '1?', answer: '1!' },
-    { id: uuid(), price: '200', question: '2?', answer: '2!' },
-    { id: uuid(), price: '300', question: '3?', answer: '3!' },
-    { id: uuid(), price: '400', question: '4?', answer: '4!' },
-    { id: uuid(), price: '500', question: '5?', answer: '5!' },
-  ],
-  [Categories.Sport]: [
-    { id: uuid(), price: '100', question: '1?', answer: '1!' },
-    { id: uuid(), price: '200', question: '2?', answer: '2!' },
-    { id: uuid(), price: '300', question: '3?', answer: '3!' },
-    { id: uuid(), price: '400', question: '4?', answer: '4!' },
-    { id: uuid(), price: '500', question: '5?', answer: '5!' },
-  ],
-  [Categories.Cinema]: [
-    { id: uuid(), price: '100', question: '1?', answer: '1!' },
-    { id: uuid(), price: '200', question: '2?', answer: '2!' },
-    { id: uuid(), price: '300', question: '3?', answer: '3!' },
-    { id: uuid(), price: '400', question: '4?', answer: '4!' },
-    { id: uuid(), price: '500', question: '5?', answer: '5!' },
-  ],
-};
+import {
+  Categories,
+  getCategories,
+  getQuestionsByCategory,
+  quiz,
+} from '../store';
 
 Modal.setAppElement('#root');
 
@@ -61,30 +19,30 @@ export const Questions = () => {
   useEffect(() => {}, []);
 
   const openQuestion = (id: string) => {
-    const keys = Object.keys(quiz).map((value, index) => value);
-    console.log(keys);
-    console.log(id);
+    setIsModalOpened(true);
   };
+
+  getCategories();
 
   return (
     <main className={Styles.questions}>
-      {Object.values(quiz).map((questions, index) => (
-        <Row key={index}>
-          <Cell
-            key={index}
-            onPress={() => {}}
-            question={{ id: '', price: '', answer: '', question: '' }}
-          >
-            <p>Stuff Stuff</p>
-          </Cell>
-          {questions.map((question, index) => (
-            <Cell key={index} question={question} onPress={openQuestion} />
-          ))}
-        </Row>
-      ))}
+      {/*{ => (*/}
+      {/*  <Row key={index}>*/}
+      {/*    <Cell*/}
+      {/*      key={index}*/}
+      {/*      onPress={() => {}}*/}
+      {/*      question={{ id: '', price: '', answer: '', question: '' }}*/}
+      {/*    >*/}
+      {/*      <p>Stuff Stuff</p>*/}
+      {/*    </Cell>*/}
+      {/*    {questions.map((question, index) => (*/}
+      {/*      <Cell key={index} question={question} onPress={openQuestion} />*/}
+      {/*    ))}*/}
+      {/*  </Row>*/}
+      {/*))}*/}
 
       <Modal
-        isOpen={true}
+        isOpen={isModalOpened}
         style={{
           content: {
             top: '50%',
@@ -106,7 +64,10 @@ export const Questions = () => {
           overlay: { backgroundColor: 'rgba(0,0,0,0.8)' },
         }}
       >
-        <button style={{ background: 'transparent', border: 'none' }}>
+        <button
+          style={{ background: 'transparent', border: 'none' }}
+          onClick={() => setIsModalOpened(false)}
+        >
           <FaTimes size={32} color={'#ffffff'} />
         </button>
         <p>Some modal stuff</p>

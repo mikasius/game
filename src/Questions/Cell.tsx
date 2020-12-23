@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Question } from './index';
+import { Question } from '../store';
 
 import Styles from './index.module.scss';
 
@@ -16,7 +16,7 @@ export const Cell = (props: OwnProps) => {
     <div
       className={Styles.cell}
       style={props.style}
-      onClick={(event) => props.onPress(props.question.id)}
+      onClick={(event) => props.onPress(props.question.category)}
     >
       {props.question.price}
       {props.children}
