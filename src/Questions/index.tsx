@@ -13,7 +13,7 @@ const categories = getCategories();
 export const Questions = () => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState<Question>({
-    category: 'MCC',
+    category: 'Про MCC Tomsk',
     price: '100',
     type: 'text',
     question: '',

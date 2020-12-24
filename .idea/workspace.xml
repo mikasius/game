@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd4f4ac-7031-4b81-b07b-19035eb475b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Questions/Items/Answer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/mcc-portal.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Questions/Items/TextQuestion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/Items/TextQuestion.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Questions/Items/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/Items/index.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Questions/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Questions/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +51,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/assets/audio" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/src/Questions/items" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -124,6 +123,18 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/store/index.ts</url>
+          <line>25</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
