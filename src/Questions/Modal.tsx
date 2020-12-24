@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import React, { useState } from 'react';
 import { Question } from '../store';
 import { QuestionItem } from './Items';
+import { Answer } from './Items/Answer';
 
 const modalConfiguration: Partial<Modal.Props> = {
   style: {
@@ -57,7 +58,7 @@ export const QuestModal = (props: Props) => {
         </div>
 
         <div className={Styles.question}>
-          {isAnswerShown ? props.question.answer : <QuestionItem {...props} />}
+          {isAnswerShown ? <Answer {...props} /> : <QuestionItem {...props} />}
         </div>
       </div>
     </Modal>
