@@ -1,5 +1,8 @@
 import _ from 'lodash';
 
+import catImage from '../assets/images/cat.jpg';
+import music from '../assets/audio/music.mp3';
+
 export type Categories = 'Games' | 'MCC' | 'Sport' | 'Cinema';
 export type Price = '100' | '200' | '300' | '400' | '500';
 export type Type = 'audio' | 'image' | 'text';
@@ -9,6 +12,7 @@ export type Question = {
   type: Type;
   price: Price;
   question: string;
+  description?: string;
   answer: string;
 };
 
@@ -45,14 +49,16 @@ export const quiz: Question[] = [
     category: 'MCC',
     type: 'audio',
     price: '300',
-    question: '200?',
+    question: music,
+    description: 'Let`s rock!',
     answer: '200!',
   },
   {
     category: 'Sport',
     type: 'image',
     price: '200',
-    question: '22?',
+    question: catImage,
+    description: 'Sho ce take?',
     answer: '22!',
   },
 ];
