@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd4f4ac-7031-4b81-b07b-19035eb475b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Questions/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Questions/Cell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/Cell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Questions/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/index.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Questions/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +14,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>

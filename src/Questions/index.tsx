@@ -3,10 +3,11 @@ import { Cell } from './Cell';
 import Styles from './index.module.scss';
 import { Row } from './Row';
 import Modal from 'react-modal';
-import { FaTimes } from 'react-icons/fa';
 import { getCategories, getQuestionsByCategory, Question } from '../store';
+import { QuestModal } from './Modal';
 
 Modal.setAppElement('#root');
+
 const categories = getCategories();
 
 export const Questions = () => {
@@ -21,10 +22,12 @@ export const Questions = () => {
 
   useEffect(() => {}, []);
 
-  const openQuestion = (question: Question) => {
+  const openModalWithQuestion = (question: Question) => {
     setIsModalOpened(true);
     setCurrentQuestion(question);
   };
+
+  const closeModal = () => setIsModalOpened(false);
 
   return (
     <main className={Styles.questions}>
@@ -35,47 +38,17 @@ export const Questions = () => {
             <Cell
               key={`Cinema-${question.price}`}
               question={question}
-              onPress={openQuestion}
+              onPress={openModalWithQuestion}
             />
           ))}
         </Row>
       ))}
 
-      <Modal
-        isOpen={isModalOpened}
-        style={{
-          content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-
-            transform: 'translate(-50%, -50%)',
-            borderColor: '#1d2124',
-
-            borderRadius: 10,
-
-            width: '80%',
-            height: '80%',
-
-            background: '#1d2124',
-          },
-          overlay: { backgroundColor: 'rgba(0,0,0,0.8)' },
-        }}
-      >
-        <div className={Styles.modal}>
-          <button
-            className={Styles.close}
-            onClick={() => setIsModalOpened(false)}
-          >
-            <FaTimes size={32} color={'#ffffff'} />
-          </button>
-          <div className={Styles.question}>
-            <p>{currentQuestion.question}</p>
-          </div>
-        </div>
-      </Modal>
+      <QuestModal
+        isVisible={isModalOpened}
+        onClose={closeModal}
+        question={currentQuestion}
+      />
     </main>
   );
 };
