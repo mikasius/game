@@ -48,6 +48,7 @@
     "jest-circus": "26.6.0",
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
+    "lodash": "4.17.20",
     "mini-css-extract-plugin": "0.11.3",
     "optimize-css-assets-webpack-plugin": "5.0.4",
     "pnp-webpack-plugin": "1.6.4",
@@ -80,6 +81,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "devDependencies": {
+    "@types/lodash": "4.14.166",
     "@types/react-modal": "^3.10.6",
     "@types/uuid": "^8.3.0",
     "eslint-config-prettier": "7.1.0",

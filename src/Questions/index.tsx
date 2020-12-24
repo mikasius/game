@@ -4,42 +4,42 @@ import Styles from './index.module.scss';
 import { Row } from './Row';
 import Modal from 'react-modal';
 import { FaTimes } from 'react-icons/fa';
-import {
-  Categories,
-  getCategories,
-  getQuestionsByCategory,
-  quiz,
-} from '../store';
+import { getCategories, getQuestionsByCategory, Question } from '../store';
 
 Modal.setAppElement('#root');
+const categories = getCategories();
 
 export const Questions = () => {
   const [isModalOpened, setIsModalOpened] = useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState<Question>({
+    category: 'MCC',
+    price: '100',
+    type: 'text',
+    question: '',
+    answer: '',
+  });
 
   useEffect(() => {}, []);
 
-  const openQuestion = (id: string) => {
+  const openQuestion = (question: Question) => {
     setIsModalOpened(true);
+    setCurrentQuestion(question);
   };
-
-  getCategories();
 
   return (
     <main className={Styles.questions}>
-      {/*{ => (*/}
-      {/*  <Row key={index}>*/}
-      {/*    <Cell*/}
-      {/*      key={index}*/}
-      {/*      onPress={() => {}}*/}
-      {/*      question={{ id: '', price: '', answer: '', question: '' }}*/}
-      {/*    >*/}
-      {/*      <p>Stuff Stuff</p>*/}
-      {/*    </Cell>*/}
-      {/*    {questions.map((question, index) => (*/}
-      {/*      <Cell key={index} question={question} onPress={openQuestion} />*/}
-      {/*    ))}*/}
-      {/*  </Row>*/}
-      {/*))}*/}
+      {categories.map((category) => (
+        <Row key={category}>
+          <Cell key={category} title={category} style={{ minWidth: '210px' }} />
+          {getQuestionsByCategory(category).map((question) => (
+            <Cell
+              key={`Cinema-${question.price}`}
+              question={question}
+              onPress={openQuestion}
+            />
+          ))}
+        </Row>
+      ))}
 
       <Modal
         isOpen={isModalOpened}
@@ -64,13 +64,17 @@ export const Questions = () => {
           overlay: { backgroundColor: 'rgba(0,0,0,0.8)' },
         }}
       >
-        <button
-          style={{ background: 'transparent', border: 'none' }}
-          onClick={() => setIsModalOpened(false)}
-        >
-          <FaTimes size={32} color={'#ffffff'} />
-        </button>
-        <p>Some modal stuff</p>
+        <div className={Styles.modal}>
+          <button
+            className={Styles.close}
+            onClick={() => setIsModalOpened(false)}
+          >
+            <FaTimes size={32} color={'#ffffff'} />
+          </button>
+          <div className={Styles.question}>
+            <p>{currentQuestion.question}</p>
+          </div>
+        </div>
       </Modal>
     </main>
   );
