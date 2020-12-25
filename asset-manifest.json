@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/game/static/css/main.479074ae.chunk.css",
+    "main.js": "/game/static/js/main.47e65c2b.chunk.js",
+    "main.js.map": "/game/static/js/main.47e65c2b.chunk.js.map",
+    "runtime-main.js": "/game/static/js/runtime-main.91858bbb.js",
+    "runtime-main.js.map": "/game/static/js/runtime-main.91858bbb.js.map",
+    "static/js/2.4b66abcf.chunk.js": "/game/static/js/2.4b66abcf.chunk.js",
+    "static/js/2.4b66abcf.chunk.js.map": "/game/static/js/2.4b66abcf.chunk.js.map",
+    "index.html": "/game/index.html",
+    "static/css/main.479074ae.chunk.css.map": "/game/static/css/main.479074ae.chunk.css.map",
+    "static/js/2.4b66abcf.chunk.js.LICENSE.txt": "/game/static/js/2.4b66abcf.chunk.js.LICENSE.txt",
+    "static/media/bf.fb1c7d96.mp3": "/game/static/media/bf.fb1c7d96.mp3",
+    "static/media/halone.df6f28d5.mp3": "/game/static/media/halone.df6f28d5.mp3",
+    "static/media/in-motion.ebca376b.mp3": "/game/static/media/in-motion.ebca376b.mp3",
+    "static/media/inta-with-metal.f7b18c1e.mp3": "/game/static/media/inta-with-metal.f7b18c1e.mp3",
+    "static/media/mcc-portal.22879b0c.png": "/game/static/media/mcc-portal.22879b0c.png",
+    "static/media/programmingLanguage.5933ba40.png": "/game/static/media/programmingLanguage.5933ba40.png",
+    "static/media/shvarz.34c58a12.mp3": "/game/static/media/shvarz.34c58a12.mp3",
+    "static/media/someBigThing.73f43898.jpg": "/game/static/media/someBigThing.73f43898.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91858bbb.js",
+    "static/js/2.4b66abcf.chunk.js",
+    "static/css/main.479074ae.chunk.css",
+    "static/js/main.47e65c2b.chunk.js"
+  ]
+}
