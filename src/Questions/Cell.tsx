@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { Question } from '../store';
 
 import Styles from './index.module.scss';
@@ -18,8 +18,14 @@ export const Cell = (props: OwnProps) => {
     props.onPress(props.question);
   };
 
+  const isViewedStyle: CSSProperties = {
+    ...props.style,
+    background: props.question?.isViewed ? '#cfe0e3' : '',
+    borderColor: props.question?.isViewed ? '#1d2124' : '',
+  };
+
   return (
-    <div className={Styles.cell} style={props.style} onClick={handleClick}>
+    <div className={Styles.cell} style={isViewedStyle} onClick={handleClick}>
       {props.title || props.question?.price}
     </div>
   );

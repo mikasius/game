@@ -3,40 +3,62 @@ import { Cell } from './Cell';
 import Styles from './index.module.scss';
 import { Row } from './Row';
 import Modal from 'react-modal';
-import { getCategories, getQuestionsByCategory, Question } from '../store';
+import {
+  getCategories,
+  getQuestionsByCategory,
+  Question,
+  quiz,
+} from '../store';
 import { QuestModal } from './Modal';
 
 Modal.setAppElement('#root');
-
-const categories = getCategories();
+const categories = getCategories(quiz);
 
 export const Questions = () => {
   const [isModalOpened, setIsModalOpened] = useState(false);
+  const [questions, updateQuestions] = useState<Question[]>(quiz);
   const [currentQuestion, setCurrentQuestion] = useState<Question>({
     category: 'Про MCC Tomsk',
     price: '100',
     type: 'text',
     question: '',
     answer: '',
+    isViewed: false,
   });
 
   useEffect(() => {}, []);
 
   const openModalWithQuestion = (question: Question) => {
-    setIsModalOpened(true);
     setCurrentQuestion(question);
+    setIsModalOpened(true);
   };
 
-  const closeModal = () => setIsModalOpened(false);
+  const closeModal = () => {
+    updateQuestions((prevState) => {
+      prevState.filter((question) => {
+        if (
+          question.price === currentQuestion.price &&
+          question.category === currentQuestion.category
+        ) {
+          return (question.isViewed = true);
+        } else {
+          return question.isViewed;
+        }
+      });
+
+      return [...prevState];
+    });
+    setIsModalOpened(false);
+  };
 
   return (
     <main className={Styles.questions}>
       {categories.map((category) => (
         <Row key={category}>
           <Cell key={category} title={category} style={{ minWidth: '210px' }} />
-          {getQuestionsByCategory(category).map((question) => (
+          {getQuestionsByCategory(questions, category).map((question) => (
             <Cell
-              key={`Cinema-${question.price}`}
+              key={`${category}-${question.price}`}
               question={question}
               onPress={openModalWithQuestion}
             />

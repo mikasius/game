@@ -13,6 +13,7 @@ export type Question = {
   question: string;
   description?: string;
   answer: string;
+  isViewed: boolean;
 };
 
 export const quiz: Question[] = [
@@ -22,6 +23,7 @@ export const quiz: Question[] = [
     type: 'text',
     question: 'Назовите городской телефонный номер нашей компании',
     answer: '900-701',
+    isViewed: false,
   },
   {
     category: 'Про MCC Tomsk',
@@ -30,6 +32,7 @@ export const quiz: Question[] = [
     question:
       'Как называется наука, для которой разрабатывается основная часть нашего кода?',
     answer: 'Сомнология',
+    isViewed: false,
   },
   {
     category: 'Про MCC Tomsk',
@@ -37,6 +40,7 @@ export const quiz: Question[] = [
     type: 'text',
     question: 'Какого числа состоялся наш первый митап?',
     answer: '29 ноября 2018',
+    isViewed: false,
   },
   {
     category: 'Про MCC Tomsk',
@@ -46,6 +50,7 @@ export const quiz: Question[] = [
       'Почему в качестве основного элемента стиля в МСС используется лабиринт?',
     answer:
       'Потому что наши программисты ищут максимально короткий путь решения задачи и потому что компания может найти выход из любой ситуации',
+    isViewed: false,
   },
   {
     category: 'Про MCC Tomsk',
@@ -54,14 +59,62 @@ export const quiz: Question[] = [
     question: mccPortalImage,
     description: 'Как называется этот раздел в Sharepoint MCC?',
     answer: 'Наши правила',
+    isViewed: false,
+  },
+  {
+    category: 'Sport',
+    price: '100',
+    type: 'text',
+    question: 'Назовите городской телефонный номер нашей компании',
+    answer: '900-701',
+    isViewed: false,
+  },
+  {
+    category: 'Sport',
+    price: '200',
+    type: 'text',
+    question:
+      'Как называется наука, для которой разрабатывается основная часть нашего кода?',
+    answer: 'Сомнология',
+    isViewed: false,
+  },
+  {
+    category: 'Sport',
+    price: '300',
+    type: 'text',
+    question: 'Какого числа состоялся наш первый митап?',
+    answer: '29 ноября 2018',
+    isViewed: false,
+  },
+  {
+    category: 'Sport',
+    price: '400',
+    type: 'text',
+    question:
+      'Почему в качестве основного элемента стиля в МСС используется лабиринт?',
+    answer:
+      'Потому что наши программисты ищут максимально короткий путь решения задачи и потому что компания может найти выход из любой ситуации',
+    isViewed: false,
+  },
+  {
+    category: 'Sport',
+    price: '500',
+    type: 'image',
+    question: mccPortalImage,
+    description: 'Как называется этот раздел в Sharepoint MCC?',
+    answer: 'Наши правила',
+    isViewed: false,
   },
 ];
 
-export const getQuestionsByCategory = (category: string): Question[] => {
+export const getQuestionsByCategory = (
+  quiz: Question[],
+  category: string
+): Question[] => {
   return quiz.filter((question) => question.category === category);
 };
 
-export const getCategories = (): string[] => {
+export const getCategories = (quiz: Question[]): string[] => {
   const categories = [...quiz].map((question) => question.category);
   return _.uniq(categories);
 };
