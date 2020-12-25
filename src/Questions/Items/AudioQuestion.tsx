@@ -10,7 +10,7 @@ type Props = {
 export const AudioQuestion = (props: Props) => {
   return (
     <div className={Styles.audio}>
-      <audio controls>
+      <audio controls style={{ width: 600 }}>
         <source src={props.question.question} type={'audio/mpeg'} />
       </audio>
       <p>{props.question.description}</p>

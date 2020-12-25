@@ -4,11 +4,19 @@ import mccPortalImage from '../assets/images/mcc-portal.png';
 import programmingLanguageImage from '../assets/images/programmingLanguage.png';
 import bigStrangeThing from '../assets/images/someBigThing.jpg';
 
+import inMotion from '../assets/audio/in-motion.mp3';
+import gogogo from '../assets/audio/bf.mp3';
+import ha from '../assets/audio/halone.mp3';
+import intaWithMetal from '../assets/audio/inta-with-metal.mp3';
+import shvarcenegr from '../assets/audio/shvarz.mp3';
+
 export type Categories =
   | 'Информатика (6+)'
   | 'Информатика (18+)'
   | 'Про MCC Tomsk'
-  | 'Афоризмы в IT';
+  | 'Афоризмы в IT'
+  | 'Музыка';
+
 export type Price = '100' | '200' | '300' | '400' | '500';
 export type Type = 'audio' | 'image' | 'text';
 
@@ -202,6 +210,51 @@ export const quiz: Question[] = [
       'Дополните известное высказывание Бьёрна Страуструпа «Есть всего два типа языков программирования: те, на которые люди всё время ругаются, и те, которые ___________ ___________ ___________»',
     answer:
       '«Есть всего два типа языков программирования: те, на которые люди всё время ругаются, и те, которые `никто не использует`»',
+    isViewed: false,
+  },
+  {
+    category: 'Музыка',
+    price: '100',
+    type: 'audio',
+    question: inMotion,
+    description: 'Из какого фильма трек',
+    answer: 'Социальная сеть',
+    isViewed: false,
+  },
+  {
+    category: 'Музыка',
+    price: '200',
+    type: 'audio',
+    question: gogogo,
+    description: 'Из какой игры трек',
+    answer: 'Battlefield',
+    isViewed: false,
+  },
+  {
+    category: 'Музыка',
+    price: '300',
+    type: 'audio',
+    question: ha,
+    description: 'Из какого фильма трек',
+    answer: 'Один дома',
+    isViewed: false,
+  },
+  {
+    category: 'Музыка',
+    price: '400',
+    type: 'audio',
+    question: intaWithMetal,
+    description: 'Из какого фильма трек',
+    answer: 'Интерстеллар',
+    isViewed: false,
+  },
+  {
+    category: 'Музыка',
+    price: '500',
+    type: 'audio',
+    question: shvarcenegr,
+    description: 'Кто исполнитель данного шедевра',
+    answer: 'Александр Невский',
     isViewed: false,
   },
 ];
