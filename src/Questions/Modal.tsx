@@ -20,8 +20,8 @@ const modalConfiguration: Partial<Modal.Props> = {
 
       borderRadius: 10,
 
-      width: '80%',
-      height: '70%',
+      width: '70%',
+      height: '90%',
 
       background: '#1d2124',
     },
