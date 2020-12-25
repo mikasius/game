@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd4f4ac-7031-4b81-b07b-19035eb475b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-icon-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-icon-36x36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-icon-48x48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-icon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-114x114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-120x120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-152x152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-180x180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-57x57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-60x60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-76x76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon-precomposed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/browserconfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-96x96.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ms-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ms-icon-150x150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ms-icon-310x310.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ms-icon-70x70.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/assets/audio" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/assets/images" />
-      <recent name="$PROJECT_DIR$/src/Questions/items" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
